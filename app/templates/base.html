@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <title>Alexandria</title>
+
+        <!-- FavIcon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat" rel="stylesheet">
+
+
+        <!-- JS e CSS externo -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+        <!-- G Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Stylish" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Nav -->
+        <div class="pos-f-t">
+            <div class="collapse fixed-top buscaop" id="busca">
+                <div class="bg-light p-4">
+                    <form class="form-inline my-2 my-sm-0">
+                        <div class="input-group-prepend">
+                            <i class="fa fa-arrow-left btn" data-toggle="collapse" data-target="#busca" aria-controls="navbarTogglerContent" aria-expanded="false" aria-label="Toggle Navigation"></i>
+                        </div>
+                        <input class="form-control col my-2 my-sm-2" type="search" placeholder="Buscar por Livro, Autor, Editora, Usuario..." aria-label="Search" aria-describedby="basic-addon8">
+                        <a href="#"><i class="btn fa fa-search"></i></a>
+                    </form>
+                </div>
+            </div>
+            <div class="pos-f-t row">
+                <div class="collapse fixed-top buscaop" id="op">
+                    <div class="bg-light p-4">
+                        <div class="input-group-prepend">
+                            <i class="fa fa-arrow-left btn" data-toggle="collapse" data-target="#op" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></i>
+                        </div>
+                        <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-home navIcon"></i> Pagina Principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-bars navIcon"></i> Meus Livros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-group navIcon"></i> Equipe Alexandria</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-sm-0"></form>
+                    </div>
+                </div>
+                <div class="col-lg-10"></div>
+            </div>
+            <nav class="navbar fixed-top navbar-light bg-light">
+                <form class="form-inline my-2 my-sm-0">
+                    <button class="btn btn-light navbtn" type="button" data-toggle="collapse" data-target="#op" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars navItem"></span>
+                    </button>
+                    <i class="btn btn-info fa fa-search navItem navbtn" id="searchBtn" data-toggle="collapse" data-target="#busca" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></i>
+                </form>
+                <form class="form-inline my-2 my-sm-0">
+                    <a href="{{ url_for('index') }}" class="navbar-brand btn btn-light" id="brandAlexandria">
+                        <span class="fa fa-paper-plane navItem"></span> <span id="brandAlexandria"> Alexandria</span>
+                    </a>
+                </form>
+                <form class="form-inline my-2 my-sm-0">
+                    <i class="btn btn material-icons" id="navLogin" data-toggle="collapse" data-target="#login" aria-controls="login"></i>
+                </form>
+            </nav>
+
+                    <!-- Login -->
+              <div class="row fixed-top">
+                <div class="col-lg-8"></div>
+                <div class="col-lg-4">
+                    <div class="collapse multi-collapse zIndex logCad" id="login">
+                        <div class="card card-body">
+                            <button type="button" class="close" data-toggle="collapse" data-target="#login" aria-label="Close">
+                                <span class="alignRight" aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="btn btn material-icons" id="navLogin" data-toggle="collapse" data-target="#login" aria-controls="login"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h2>Login</h2>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col">
+                                <form class="needs-validation container" action="" method="POST">
+                                  {{ form.csrf_token }}
+                                  <div class="input-group mb-3">
+                                      {% if form.errors.username %}
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text border-danger" id="basic-addon1">@</span>
+                                        </div>
+                                        {{ form.username(class="form-control is-invalid", placeholder="Usuário ou E-mail") }}
+                                        <div class="invalid-feedback">
+                                          Usuário Invalido!
+                                        </div>
+                                      {% else %}
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                        </div>
+                                        {{ form.username(class="form-control", placeholder="Usuário ou E-mail") }}
+                                      {% endif %}
+                                  </div>
+                                  <div class="input-group mb-3">
+                                      {% if form.errors.password %}
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text border-danger" id="basic-addon2">** </span>
+                                      </div>
+                                        {{ form.password(class="form-control is-invalid", placeholder="Senha") }}
+                                        <div class="invalid-feedback">
+                                          Senha Invalida!
+                                        </div>
+                                      {% else %}
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon2">** </span>
+                                      </div>
+                                        {{ form.password(class="form-control", placeholder="Senha") }}
+                                      {% endif %}
+                                  </div>
+                                </div>
+                                <div class="col-md-1">
+                              </div>
+                              </div>
+                              <hr>
+                              <center>
+                                  <div>
+                                      <a href="{{ url_for('cadastro') }}" class="btn btn-pill btn-secondary" id="criarConta">Criar Conta</a>
+                                      {{ form.logSubmit(id="btnEntrar", class="btn btn-success", value="Entrar") }}
+                                    </div>
+                                  <div id="">
+                                      <a href="" id="esqueciTxt" data-toggle="modal" data-target="#recuperar">Esqueci minha senha</a>
+                                  </div>
+                              </center>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Esqueci minha senha -->
+        <div class="modal fade" id="recuperar" tabindex="-1" role="dialog" aria-labelledby="recuperarLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="recuperarLabel">Recuperar Senha</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <form>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    </div>
+                                    <h4>Este é seu</h4>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="opEmail" value="option1">
+                                        <label class="form-check-label" for="opEmail">
+                                            E-mail
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="opUser" value="option2">
+                                        <label class="form-check-label" for="opUser">
+                                            Usuário
+                                        </label>
+                                    </div><br><hr>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button class="btn btn-danger" type="submit" aria-expanded="false" aria-controls="login">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

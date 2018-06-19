@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Alexandria</title>
+
+        <!-- FavIcon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <!-- JS e CSS externo -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nav.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+        <!-- G Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Stylish" rel="stylesheet">
+        <style type="text/css">
+          nav{
+            background-color: aliceblue;
+          }
+          #brand{
+            font-size: 28px;
+          }
+          .fa-paper-plane{
+            font-size: 28px;
+          }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    </head>
+    <body>
+
+      <!-- Nav -->
+          <nav class="navbar navbar-light">
+              <form class="form-inline my-2 my-sm-0">
+              </form>
+              <form class="form-inline my-2 my-sm-0">
+                  <a class="navbar-brand btn" id="" href="{{ url_for('index') }}">
+                      <span class="fa fa-paper-plane navItem"></span> <span id="brand" style="font-family: 'Indie Flower', cursive;"> Alexandria</span>
+                  </a>
+              </form>
+              <form class="form-inline my-2 my-sm-0">
+              </form>
+          </nav>
+    {% block content %}
+    {% endblock %}
+    </body>
+<html>

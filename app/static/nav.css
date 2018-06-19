@@ -1,0 +1,124 @@
+@charset utf-8;
+body{
+    background-color: aliceblue;
+}
+#navLogin{
+    border-radius: 50%;
+    background-image: url(usuario.png);
+    width: 34px; height: 34px;
+    background-size: 100%;
+}
+#navLoged{
+    border-radius: 50%;
+    background-image: url(teste.jpg);
+    width: 34px; height: 34px;
+    background-size: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input-group{
+    margin: 0px;
+}
+#cadIcon{
+  border-radius: 50%;
+  background-image: url(icon-cadastro.png);
+  width: 34px; height: 34px;
+  background-size: 100%;
+  background-color: blue;
+}
+#cadBtn{
+  width: 100%;
+}
+#busca{
+    margin-top: 30px;
+    z-index: 1000;
+}
+#profilePic{
+    border-radius: 50%;
+    background-image: url(teste.jpg);
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#op{
+    margin-top: 39px;
+    z-index: 999;
+}
+.pInfo{
+    margin: 1px;
+}
+.navIcon{
+    font-size: 18px;
+}
+.navItem{
+    font-size: 16px;
+    margin-left: 5px;
+}
+#criarConta{
+    margin-bottom: 3px;
+}
+#btnEntrar{
+    margin-bottom: 3px;
+}
+#navLogin{
+    margin-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 23px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zIndex{
+    z-index: 1000;
+    position: absolute;
+}
+.logCad{
+    margin-top: 65px;
+    z-index: 800;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cad{
+    margin-top: 15px;
+    z-index: 800;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#login{
+    z-index: 900;
+}
+.close{
+    text-align: right;
+    margin: 0px;
+}
+h2{
+    margin: 0px;
+}
+#esqueciTxt{
+    color: darkred;
+    text-decoration: underline;
+    text-decoration-color: darkred;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.alignRight{
+    text-align: right;
+}
+.form-check{
+    margin-left: 40px;
+}
+.btn-danger{
+    min-width: 200px;
+}
+#brandAlexandria{
+    font-size: 15px;
+}
+#btnFullProfile{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.close{
+    margin-right: 20px;
+}
